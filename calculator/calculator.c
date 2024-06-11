@@ -15,9 +15,17 @@ int main() {
     int secondNum;
     int result;
 
-    scanf("%d %d", &firstNum, &secondNum);
+    printf("Enter the numbers that you would like to calculate!\n\n");
+
+    printf("Number 1: ");
+    scanf("%d", &firstNum);
+
+    printf("Number 2: ");
+    scanf("%d", &secondNum);
+
     result = add(firstNum, secondNum);
-    printf("%d + %d = %d", firstNum, secondNum, result);
+
+    printf("\n%d + %d = %d", firstNum, secondNum, result);
 
     return 0;
 }
