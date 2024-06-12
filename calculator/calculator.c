@@ -30,6 +30,16 @@ int mul(int num1, int num2) {
     return result;
 }
 
+int div(int num1, int num2) {
+    int result = 0;
+
+    if (num1 != 0 && num2 != 0) {
+        result = num1 / num2;
+    }
+    
+    return result;
+}
+
 int main() {
     int firstNum;
     int secondNum;
@@ -44,7 +54,7 @@ int main() {
     printf("Number 2: ");
     scanf(" %d", &secondNum);
 
-    printf("Enter the operation you would like to perform! +, -, *\n\n");
+    printf("Enter the operation you would like to perform! +, -, *, /\n\n");
 
     printf("Operation: ");
     scanf(" %c", &operation);
@@ -55,6 +65,8 @@ int main() {
         result = sub(firstNum, secondNum);
     } else if (operation == '*') {
 		result = mul(firstNum, secondNum);
+	} else if (operation == '/') {
+		result = div(firstNum, secondNum);
 	}
 
     printf("\n%d + %d = %d", firstNum, secondNum, result);
